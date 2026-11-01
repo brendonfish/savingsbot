@@ -1,0 +1,65 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "tw-price-checker",
+  "version": "1.0.5",
+  "description": "Paste a Taiwan e-commerce product link (momo, PChome, Yahoo, Rakuten, Ruten) to see how its listed price has changed over time, a summary of buyer reviews, where else the same model is sold, and better-reviewed alternatives. Shopee links are not supported.",
+  "author": {
+    "name": "余宗恩"
+  },
+  "license": "MIT",
+  "keywords": [
+    "savingsbot",
+    "輕鬆省輕鬆報",
+    "price comparison",
+    "price history",
+    "reviews",
+    "taiwan",
+    "momo",
+    "pchome",
+    "biggo",
+    "shopping"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Savingsbot",
+        "shortDescription": "Price history & reviews in TW",
+        "longDescription": "Savingsbot (輕鬆省輕鬆報): Paste a product link from a Taiwan online store (momo, PChome, Yahoo, Rakuten, Ruten) and get one report: how the product's listed price has changed over time on BigGo, a summary of buyer reviews with sources, where else the same model is sold, and up to three better-reviewed alternatives with a spec comparison and links. You can also ask for a daily check that tells you when the listed price falls below a level you set. Uses ChatGPT's browser and web search. Limitations: Shopee links are not supported; results depend on what each website shows at the time; this plugin never places orders or signs in to stores.",
+        "developerName": "余宗恩",
+        "category": "Other",
+        "capabilities": [
+          "Price history",
+          "Review summary",
+          "Price comparison",
+          "Alternative suggestions",
+          "Price-drop alerts"
+        ],
+        "defaultPrompt": [
+          "幫我看看這個商品值不值得買：",
+          "這個商品哪裡買最便宜？",
+          "這個商品降價時通知我"
+        ],
+        "brandColor": "#1F7A5C",
+        "brandColorDark": "#5FD3A8",
+        "composerIcon": "./assets/icon.png",
+        "composerIconDark": "./assets/icon-dark.png",
+        "logo": "./assets/logo.png",
+        "logoDark": "./assets/logo-dark.png",
+        "privacyPolicyURL": "https://savingsbot.luxurai.com/chatgpt-savingsbot-privacy.html"
+      },
+      "onboardingSkill": "./skills/get-started/SKILL.md",
+      "publication": {
+        "countries": [
+          "TW"
+        ],
+        "release_notes": "Distributed via GitHub for self-install.",
+        "translations": {
+          "zh-TW": {
+            "subtitle": "輕鬆省輕鬆報：比價看評價",
+            "description": "輕鬆省輕鬆報（Savingsbot）：貼上台灣電商（momo、PChome、Yahoo、樂天、露天）的商品網址，就產出一份報告：BigGo 上的價格走勢、附來源的買家評價摘要、同型號還有哪些通路在賣，以及最多三個評價更好的替代品（附規格比較和連結）。也可以設定每天檢查一次，價格低於你設定的數字時通知你。使用 ChatGPT 的瀏覽器與網路搜尋。不支援蝦皮；不會代為下單或登入任何網站。"
+          }
+        }
+      }
+    }
+  }
+}
